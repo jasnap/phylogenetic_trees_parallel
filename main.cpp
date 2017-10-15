@@ -14,7 +14,8 @@ int main(int argc, char* argv[]){
 	int num_of_seq, is_p, num_thread;
 	ss_vector tree_models;
 	ss_vector set_of_seq;
-	std::ifstream infile("longula_seq.txt" );
+	assert(argc >= 2);
+	std::ifstream infile(argv[1]);
 	set_of_seq = parsetxt(infile);
 	int_vector id, comp_vec, new_id, last_id, prev_id;
 	vec_score fitch, new_model_score;
